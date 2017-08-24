@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(../fonts/Raleway/Raleway-Light.woff2) format('woff2'), url(../fonts/Raleway/Raleway-Light.woff) format('woff'), url(../fonts/Raleway/Raleway-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/Raleway/Raleway.eot);
+  src: local('Raleway'), local('Raleway-Regular'), url(../fonts/Raleway/Raleway.woff2) format('woff2'), url(../fonts/Raleway/Raleway.woff) format('woff'), url(../fonts/Raleway/Raleway.svg#Raleway) format('svg'), url(../fonts/Raleway/Raleway.ttf) format('truetype'), url(../fonts/Raleway/Raleway.eot?#iefix) format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(../fonts/Raleway/Raleway-SemiBold.woff2) format('woff2'), url(../fonts/Raleway/Raleway-SemiBold.woff) format('woff'), url(../fonts/Raleway/Raleway-SemiBold.ttf) format('truetype');
+}
+

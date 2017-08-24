@@ -1,0 +1,52 @@
+.el-input__icon.el-icon-date {
+    display: none;
+}
+
+.el-input__inner {
+    border: 1px solid #ccc;
+}
+
+.el-date-editor.el-input.el-date-editor--date input::-webkit-input-placeholder, .el-date-editor.el-input.el-date-editor--year input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.el-date-editor.el-input.el-date-editor--date input:-moz-placeholder, .el-date-editor.el-input.el-date-editor--year input:-moz-placeholder {
+    color: #999;
+}
+
+.el-date-editor.el-input.el-date-editor--date input::-moz-placeholder, .el-date-editor.el-input.el-date-editor--year input::-moz-placeholder {
+    color: #999;
+}
+
+.el-date-editor.el-input.el-date-editor--date input:-ms-input-placeholder, .el-date-editor.el-input.el-date-editor--year input:-ms-input-placeholder {
+    color: #999;
+}
+
+.has-error .el-input__inner {
+    border: 1px solid #E55957;
+}
+
+.el-date-editor.el-input.el-date-editor--date input::-webkit-input-placeholder, .el-date-editor.el-input.el-date-editor--year input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.el-date-editor.el-input.el-date-editor--date input:-moz-placeholder, .el-date-editor.el-input.el-date-editor--year input:-moz-placeholder {
+    color: #999;
+}
+
+.el-date-editor.el-input.el-date-editor--date input::-moz-placeholder, .el-date-editor.el-input.el-date-editor--year input::-moz-placeholder {
+    color: #999;
+}
+
+.el-date-editor.el-input.el-date-editor--date input:-ms-input-placeholder, .el-date-editor.el-input.el-date-editor--year input:-ms-input-placeholder {
+    color: #999;
+}
+
+.el-input__icon+.el-input__inner {
+    padding-right: 0px;
+}
+
+.el-date-editor.el-input { width: 100%; }
+
+.dropzone { border: 2px dashed rgba(0, 0, 0, 0.3); padding: 10px 0; text-align: center; }
+.btn-toolbar>.btn { margin-bottom: 5px; }

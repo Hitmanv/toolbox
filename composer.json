@@ -1,0 +1,12 @@
+{
+    "name": "hitman/toolbox",
+    "type": "utils",
+    "license": "mit",
+    "authors": [
+        {
+            "name": "hitman",
+            "email": "944594252@qq.com"
+        }
+    ],
+    "require": {}
+}
