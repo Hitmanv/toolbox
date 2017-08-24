@@ -7,5 +7,5 @@
 
 
 return [
-    'asset_path' => 'vendor/toolbox/',
+    'asset_path' => '/vendor/toolbox/',
 ];

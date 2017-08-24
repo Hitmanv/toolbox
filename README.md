@@ -21,7 +21,16 @@ php artisan vendor:publish
 ```
 
 ## 功能描述
-### 后台模板
+### 后台母板
+```
 /resources/views/vendor/master.blade.php
+```
+### 后台管理生成
+```
+migration -> 2017_08_24_080433_create_table_admins.php
+Model -> Admin.php
+Controller -> Admin/AdminController
+Route -> route/amdin.php
+```
 
 ### 工具命令
