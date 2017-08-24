@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>TOOLBOX</title>
-    <!--common style-->
+    <!-- common style-->
     <link href="{{ config('toolbox.asset_path') }}/css/style.css" rel="stylesheet">
     <link href="{{ config('toolbox.asset_path') }}/css/style-responsive.css" rel="stylesheet">
 </head>
