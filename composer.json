@@ -8,5 +8,10 @@
             "email": "944594252@qq.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Hitman\\": "src/"
+        }
+    }
 }
