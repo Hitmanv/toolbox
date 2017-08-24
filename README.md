@@ -14,6 +14,9 @@
 ### 添加至 app.php
 ```php
 Hitman\Toolbox\ToolboxServiceProvider::class,
+
+// 添加后台管理 auth.php
+
 ```
 ### 工具模板导出
 ```php
