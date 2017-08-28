@@ -7,6 +7,7 @@
     <!-- common style-->
     <link href="{{ config('toolbox.asset_path') }}/css/style.css" rel="stylesheet">
     <link href="{{ config('toolbox.asset_path') }}/css/style-responsive.css" rel="stylesheet">
+    @yield('css')
 </head>
 <body class="sticky-header">
 
@@ -33,6 +34,7 @@
                     <a href=""><i class="fa fa-book"></i>  <span>平台管理</span></a>
                     <ul class="child-list">
                         <li><a href="#">平台列表</a></li>
+                        <li><a href="/admin/resource">资源生成</a></li>
                     </ul>
                 </li>
             </ul>
@@ -107,4 +109,7 @@
 <script src="{{ config('toolbox.asset_path') }}/js/jquery-1.10.2.min.js"></script>
 <script src="{{ config('toolbox.asset_path') }}/js/bootstrap.min.js"></script>
 <script src="{{ config('toolbox.asset_path') }}/js/scripts.js"></script>
+<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
+@yield('script')
+
 </html>
