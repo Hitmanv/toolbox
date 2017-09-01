@@ -8,10 +8,11 @@
 namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use App\Traits\ModelTrait;
 
 class Admin extends Authenticatable
 {
+    use ModelTrait;
     protected $guarded = [];
 
     public function setPasswordAttribute($value)

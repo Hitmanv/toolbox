@@ -6,7 +6,7 @@
  * Time: 3:45 PM
  */
 
-namespace Hitman\Toolbox\Traits;
+namespace App\Traits;
 
 trait ModelTrait
 {
