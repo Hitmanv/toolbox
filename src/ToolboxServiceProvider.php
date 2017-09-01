@@ -8,11 +8,12 @@ class ToolboxServiceProvider extends ServiceProvider
 {
     public function boot()
     {
+        // 后台模板
         $this->publishes([ __DIR__ . "/config/toolbox.php" => config_path('toolbox.php') ], 'toolbox');
         $this->publishes([__DIR__ . "/assets" => public_path('vendor/toolbox')], 'toolbox');
         $this->publishes([__DIR__ . "/views" => resource_path('views/vendor/toolbox')], 'toolbox');
 
-        // 后台管理模板
+        // 后台管理员生成
         $this->publishes([__DIR__ . "/config/auth.php" => config_path('auth.php')], 'toolbox');
         $this->publishes([__DIR__ . "/Controllers/Admin" => app_path("Http/Controllers/Admin")], 'toolbox');
         $this->publishes([__DIR__ . "/routes/web.php" => base_path('routes/web.php')], 'toolbox');
