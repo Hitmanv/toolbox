@@ -2,6 +2,7 @@
 
 namespace Hitman\Toolbox;
 
+use Hitman\Toolbox\Commands\DBDocGenerator;
 use Illuminate\Support\ServiceProvider;
 
 class ToolboxServiceProvider extends ServiceProvider
@@ -22,6 +23,13 @@ class ToolboxServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . "/Models/Model.php.template" => app_path('Models/Model.php')], 'toolbox');
         $this->publishes([__DIR__ . "/Models/Admin.php.template" => app_path('Models/Admin.php')], 'toolbox');
         $this->publishes([__DIR__ . "/databases/migrations/2017_08_24_080433_create_table_admins.php" => database_path('migrations/2017_08_24_080433_create_table_admins.php')], 'toolbox');
+
+        // 数据库字典生成
+        if($this->app->runningInConsole()) {
+            $this->commands(
+                DBDocGenerator::class
+            );
+        }
     }
     
     public function register()
