@@ -37,3 +37,8 @@ Route -> route/amdin.php
 ```
 
 ### 工具命令
+#### 数据库字典生成工具
+```shell
+# 生成数据库字典 md -> docs/db.md
+php artisan tb:make_doc
+```

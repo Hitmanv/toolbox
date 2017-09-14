@@ -8,7 +8,7 @@ use Illuminate\Filesystem\Filesystem;
 
 class DBDocGenerator extends Command
 {
-    protected $signature = 'make:doc';
+    protected $signature = 'tb:db_doc';
     protected $description = '数据库文档生成';
     protected $file;
 
@@ -39,7 +39,7 @@ class DBDocGenerator extends Command
             })->implode("\n");
             $doc .= $head . $d . "\n\n";
         });
-        $path = base_path() . "/docs/docs/model.md";
+        $path = base_path() . "/docs/db.md";
         $this->makeDirectory($path);
         $this->file->put($path, $doc);
         $this->info($doc);
