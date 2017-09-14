@@ -18,7 +18,7 @@ class ToolboxServiceProvider extends ServiceProvider
         $this->publishes([__DIR__ . "/config/auth.php" => config_path('auth.php')], 'toolbox');
         $this->publishes([__DIR__ . "/Controllers/Admin/Controller.php.template" => app_path("Http/Controllers/Admin/Controller.php")], 'toolbox');
         $this->publishes([__DIR__ . "/Controllers/Admin/AdminController.php.template" => app_path("Http/Controllers/Admin/AdminController.php")], 'toolbox');
-        $this->publishes([__DIR__ . "/routes/web.php" => base_path('routes/web.php')], 'toolbox');
+        $this->publishes([__DIR__ . "/routes/admin.php" => base_path('routes/admin.php')], 'toolbox');
         $this->publishes([__DIR__ . "/Traits/ModelTrait.php.template" => app_path('Traits/ModelTrait.php')], 'toolbox');
         $this->publishes([__DIR__ . "/Models/Model.php.template" => app_path('Models/Model.php')], 'toolbox');
         $this->publishes([__DIR__ . "/Models/Admin.php.template" => app_path('Models/Admin.php')], 'toolbox');
