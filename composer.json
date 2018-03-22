@@ -1,5 +1,6 @@
 {
     "name": "hitman/toolbox",
+    "description": "my tiny tool box",
     "type": "utils",
     "license": "mit",
     "authors": [
@@ -14,6 +15,9 @@
     "autoload": {
         "psr-4": {
             "Hitman\\": "src/"
-        }
+        },
+        "files": [
+            "src/helper.php"
+        ]
     }
 }
