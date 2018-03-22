@@ -1,12 +1,12 @@
 ## composer 安装
 ```json
   {
-        "repositories" : [
-            {
-                "type": "vcs",
-                "url": "git@git.oschina.net:hitmanxiii/toolbox.git"
-            }
-        ]
+    "repositories" : [
+        {
+            "type": "vcs",
+            "url": "https://gitee.com/hitmanxiii/toolbox.git"
+        }
+    ]
     }
 ```
 
@@ -20,21 +20,9 @@ Hitman\Toolbox\ToolboxServiceProvider::class,
 ```
 ### 工具模板导出
 ```php
-php artisan vendor:publish
+php artisan tb:init
 ```
 
-## 功能描述
-### 后台母板
-```
-/resources/views/vendor/master.blade.php
-```
-### 后台管理生成
-```
-migration -> 2017_08_24_080433_create_table_admins.php
-Model -> Admin.php
-Controller -> Admin/AdminController
-Route -> route/amdin.php
-```
 
 ### 工具命令
 #### 数据库字典生成工具
