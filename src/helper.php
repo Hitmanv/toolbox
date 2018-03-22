@@ -1,16 +1,58 @@
 <?php
 
-function tb_config_content($config, $intent="\t")
+function tb_is_dir_empty($dir)
 {
-    if(!is_array($config)) return $config;
+    if (!is_readable($dir)) return NULL;
+
+    return (count(scandir($dir)) == 2);
+}
+
+function tb_write_config($config, $path)
+{
+    $content = $this->tb_config_content($config);
+    $content = "<?php \n" . "return " . $content;
+
+    file_put_contents($path, $content);
+
+    return true;
+}
+
+function tb_config_content($config, $intent = "\t")
+{
+    if (!is_array($config)) return "'{$config}'";
 
     $content = "[\n";
 
-    foreach($config as $k => $v){
-        $content .= "{$k} => " . tb_config_content($v, $intent . $intent) . ",";
+    foreach ($config as $k => $v) {
+        if ($this->is_seq($config)) {
+            $content .= $intent . $this->tb_config_content($v, $intent . $intent) . "\n";
+        } else {
+            $content .= $intent . "'{$k}' => " . $this->tb_config_content($v, $intent . $intent) . ",\n";
+        }
     }
 
-    $content .= "]\n";
+
+    $content .= $intent . "]";
 
     return $content;
+}
+
+function tb_is_seq($arr)
+{
+    return array_keys($arr) === range(0, count($arr) - 1);
+}
+
+function tb_mkdir($path)
+{
+    if (!is_dir($path)) mkdir($path, 0755, 1);
+}
+
+function tb_rmdir($path)
+{
+    if (is_dir($path) && $this->is_dir_empty($path)) rmdir($path);
+}
+
+function tb_unlink($path)
+{
+    if (is_file($path)) unlink($path);
 }
