@@ -10,19 +10,19 @@
     }
 ```
 
+```shell
+composer require hitman/toolbox:dev-master
+```
+
 ## 使用
 ### 添加至 app.php
 ```php
 Hitman\Toolbox\ToolboxServiceProvider::class,
-
-// 添加后台管理 auth.php
-
 ```
 ### 工具模板导出
 ```php
 php artisan tb:init
 ```
-
 
 ### 工具命令
 #### 数据库字典生成工具
