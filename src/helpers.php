@@ -9,7 +9,7 @@ function tb_is_dir_empty($dir)
 
 function tb_write_config($config, $path)
 {
-    $content = $this->tb_config_content($config);
+    $content = tb_config_content($config);
     $content = "<?php \n" . "return " . $content;
 
     file_put_contents($path, $content);
@@ -24,10 +24,10 @@ function tb_config_content($config, $intent = "\t")
     $content = "[\n";
 
     foreach ($config as $k => $v) {
-        if ($this->is_seq($config)) {
-            $content .= $intent . $this->tb_config_content($v, $intent . $intent) . "\n";
+        if (tb_is_seq($config)) {
+            $content .= $intent . tb_config_content($v, $intent . $intent) . "\n";
         } else {
-            $content .= $intent . "'{$k}' => " . $this->tb_config_content($v, $intent . $intent) . ",\n";
+            $content .= $intent . "'{$k}' => " . tb_config_content($v, $intent . $intent) . ",\n";
         }
     }
 
@@ -49,7 +49,7 @@ function tb_mkdir($path)
 
 function tb_rmdir($path)
 {
-    if (is_dir($path) && $this->is_dir_empty($path)) rmdir($path);
+    if (is_dir($path) && tb_is_dir_empty($path)) rmdir($path);
 }
 
 function tb_unlink($path)
