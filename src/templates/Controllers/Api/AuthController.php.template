@@ -1,0 +1,24 @@
+<?php
+/**
+ * User: hitman
+ * Date: 2019/8/20
+ * Time: 4:12 PM
+ */
+
+namespace App\Http\Controllers\Api;
+
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class AuthController extends Controller
+{
+    public function login(Request $request){
+        $credentials = $request->only(['name', 'password']);
+        if(Auth::once($credentials)){
+            return $this->responseItem(['token' => Auth::user()->api_token ]);
+        } else {
+            return $this->error("credential mismatch");
+        }
+    }
+}
