@@ -28,7 +28,7 @@
             <!-- visible small devices end-->
 
             <!--sidebar nav start-->
-        @include("sidebar")
+        @include("toolbox.sidebar")
         <!--sidebar nav end-->
 
         </div>
@@ -43,7 +43,7 @@
             <div class="logo dark-logo-bg hidden-xs hidden-sm">
                 <a href="#">
                     <i class="fa fa-credit-card"></i>
-                    <span class="brand-name" style="font-size: 17px;">GIEX</span>
+                    <span class="brand-name" style="font-size: 17px;">HITMAN</span>
                 </a>
             </div>
 

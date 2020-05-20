@@ -1,4 +1,11 @@
 <?php
+    function checkActive($items){
+        return collect($items)->contains(function($item){
+            $path = request()->decodedPath();
+            return $item['url'] == "/" .$path;
+        });
+    }
+
     $userSidebar = config('sidebar');
 ?>
 

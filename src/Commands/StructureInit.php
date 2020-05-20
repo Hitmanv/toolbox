@@ -31,10 +31,6 @@ class StructureInit extends Command
         if ($this->confirm("是否创建后台管理模板?")) {
             $this->init_admin();
         }
-
-        if($this->confirm("是否创建api auth模板")){
-            $this->init_api_auth();
-        }
     }
 
     protected function deleteFiles()
@@ -73,17 +69,4 @@ class StructureInit extends Command
         copy(__DIR__ . "/../templates/Http_Kernel.php.template", app_path('Http/Kernel.php'));
     }
 
-    protected function init_api_auth(){
-        // Model
-        copy(__DIR__ . "/../templates/Models/User.php.template", app_path("Models/User.php"));
-        tb_mkdir(app_path("Http/Controllers/Api"));
-        // Controller
-        copy(__DIR__ . "/../templates/Controllers/Api/Controller.php.template", app_path("Http/Controllers/Api/Controller.php"));
-        copy(__DIR__ . "/../templates/Controllers/Api/AuthController.php.template", app_path("Http/Controllers/Api/AuthController.php"));
-        // route
-        copy(__DIR__ . "/../routes/api.php", base_path('routes/api.php'));
-        copy(__DIR__ . "/../routes/api.php", base_path('routes/api.php'));
-        // migration
-        copy(__DIR__ . "/../databases/migrations/2019_08_20_034359_create_table_users.php", database_path('migrations/2019_08_20_034359_create_table_users.php'));
-    }
 }
