@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <title>TOOLBOX</title>
+    <title>HITMANXIII</title>
     <!-- common style-->
     <link href="{{ config('toolbox.asset_path') }}/css/style.css" rel="stylesheet">
     <link href="{{ config('toolbox.asset_path') }}/css/style-responsive.css" rel="stylesheet">
@@ -17,7 +17,7 @@
         <div class="logo dark-logo-bg visible-xs-* visible-sm-*">
             <a href="#">
                 <i class="fa fa-maxcdn"></i>
-                <span class="brand-name">SlickLab</span>
+                <span class="brand-name">HITMANXIII</span>
             </a>
         </div>
         <!--responsive view logo end-->
@@ -28,20 +28,12 @@
             <!-- visible small devices end-->
 
             <!--sidebar nav start-->
-            <ul class="nav nav-pills nav-stacked side-navigation">
-                <li><a href="#"><i class="fa fa-home"></i> <span>总览</span></a></li>
-                <li class="menu-list">
-                    <a href=""><i class="fa fa-book"></i>  <span>平台管理</span></a>
-                    <ul class="child-list">
-                        <li><a href="#">平台列表</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <!--sidebar nav end-->
+        @include("sidebar")
+        <!--sidebar nav end-->
 
         </div>
     </div>
-<!-- body content start-->
+    <!-- body content start-->
     <div class="body-content" >
 
         <!-- header section start-->
@@ -51,7 +43,7 @@
             <div class="logo dark-logo-bg hidden-xs hidden-sm">
                 <a href="#">
                     <i class="fa fa-credit-card"></i>
-                    <span class="brand-name" style="font-size: 17px;">TOOLBOX</span>
+                    <span class="brand-name" style="font-size: 17px;">GIEX</span>
                 </a>
             </div>
 
@@ -69,7 +61,8 @@
             <div class="right-notification">
                 <ul class="notification-menu">
                     <li>
-                        <a href="#" class="btn btn-default dropdown-toggle">
+                        {{ Auth::guard('admin')->user()->name }}
+                        <a href="/logout" class="btn btn-default dropdown-toggle">
                             退出登录
                         </a>
                     </li>
@@ -95,7 +88,7 @@
 
         <!--footer section start-->
         <footer>
-            2017 &copy; TOOLBOX.
+            2020 &copy; TOOLBOX.
         </footer>
         <!--footer section end-->
     </div>
@@ -108,8 +101,8 @@
 <script src="{{ config('toolbox.asset_path') }}/js/jquery-1.10.2.min.js"></script>
 <script src="{{ config('toolbox.asset_path') }}/js/bootstrap.min.js"></script>
 <script src="{{ config('toolbox.asset_path') }}/js/scripts.js"></script>
-<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>
-<script src="https://cdn.bootcss.com/axios/0.16.2/axios.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/axios/0.19.2/axios.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 @yield('script')
-
 </html>
